@@ -1,0 +1,13 @@
+#!/system/bin/sh
+
+# Systemfull Python for Android Launcher shortcut by lebigmac
+
+# http://www.systemrw.com
+
+pp="`dirname $0`/397"; v="3.9"
+export PYTHONHOME=$pp
+export LD_LIBRARY_PATH=$PYTHONHOME/lib:$LD_LIBRARY_PATH
+export PYTHONPATH=$pp/lib/python$v/site-packages
+chmod +x $pp/bin/python$v
+$pp/bin/python$v "$@"
+
